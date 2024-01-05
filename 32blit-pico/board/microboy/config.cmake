@@ -13,10 +13,11 @@ set(BLIT_BOARD_DEFINITIONS
         PICOSYSTEM_SW_RIGHT_PIN=29
         PICOSYSTEM_SW_A_PIN=25
         PICOSYSTEM_SW_B_PIN=24
-        PICOSYSTEM_SW_X_PIN=0
-        PICOSYSTEM_SW_Y_PIN=1
+        PICOSYSTEM_SW_X_PIN=49
+        PICOSYSTEM_SW_Y_PIN=49
 )
 
 blit_driver(display st7789)
 blit_driver(audio i2s)
 blit_driver(input picosystem)
+blit_driver(storage sd_spi)
