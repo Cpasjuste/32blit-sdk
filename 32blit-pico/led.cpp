@@ -24,7 +24,7 @@ static void put_pixel(uint8_t r, uint8_t g, uint8_t b, uint8_t a) {
   if(pio_sm < 0) return;
   uint32_t color =
           (((uint32_t)((r * a) >> 8) << 8)
-          | ((uint32_t)((g * a) >> 8)  << 16)
+          | ((uint32_t)((g * a) >> 8) << 16)
           | (uint32_t)((b * a) >> 8)) << 8u;
   if(color != last_color) {
     pio_sm_put_blocking(pio0, 0, color);
